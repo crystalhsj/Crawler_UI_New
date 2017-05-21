@@ -1,0 +1,92 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'SpiderSetting.ui'
+#
+# Created by: PyQt5 UI code generator 5.7
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtWidgets
+
+
+class Ui_SpiderSetting(object):
+    def setupUi(self, SpiderSetting):
+        SpiderSetting.setObjectName("SpiderSetting")
+        SpiderSetting.resize(353, 500)
+        SpiderSetting.setMinimumSize(QtCore.QSize(353, 500))
+        SpiderSetting.setMaximumSize(QtCore.QSize(353, 500))
+        self.label = QtWidgets.QLabel(SpiderSetting)
+        self.label.setGeometry(QtCore.QRect(50, 60, 81, 21))
+        self.label.setObjectName("label")
+        self.label_2 = QtWidgets.QLabel(SpiderSetting)
+        self.label_2.setGeometry(QtCore.QRect(50, 130, 81, 21))
+        self.label_2.setObjectName("label_2")
+        self.label_3 = QtWidgets.QLabel(SpiderSetting)
+        self.label_3.setGeometry(QtCore.QRect(50, 190, 81, 20))
+        self.label_3.setObjectName("label_3")
+        self.label_4 = QtWidgets.QLabel(SpiderSetting)
+        self.label_4.setGeometry(QtCore.QRect(50, 240, 81, 20))
+        self.label_4.setObjectName("label_4")
+        self.label_5 = QtWidgets.QLabel(SpiderSetting)
+        self.label_5.setGeometry(QtCore.QRect(50, 300, 68, 17))
+        self.label_5.setObjectName("label_5")
+        self.label_6 = QtWidgets.QLabel(SpiderSetting)
+        self.label_6.setGeometry(QtCore.QRect(50, 360, 81, 17))
+        self.label_6.setObjectName("label_6")
+        self.comboBox = QtWidgets.QComboBox(SpiderSetting)
+        self.comboBox.setGeometry(QtCore.QRect(200, 120, 101, 27))
+        self.comboBox.setObjectName("comboBox")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.spinBox = QtWidgets.QSpinBox(SpiderSetting)
+        self.spinBox.setGeometry(QtCore.QRect(200, 60, 101, 27))
+        self.spinBox.setMaximum(1000)
+        self.spinBox.setProperty("value", 4)
+        self.spinBox.setObjectName("spinBox")
+        self.spinBox_2 = QtWidgets.QSpinBox(SpiderSetting)
+        self.spinBox_2.setGeometry(QtCore.QRect(200, 180, 101, 27))
+        self.spinBox_2.setMaximum(100000)
+        self.spinBox_2.setProperty("value", 3)
+        self.spinBox_2.setObjectName("spinBox_2")
+        self.spinBox_3 = QtWidgets.QSpinBox(SpiderSetting)
+        self.spinBox_3.setGeometry(QtCore.QRect(200, 240, 101, 27))
+        self.spinBox_3.setMaximum(100000)
+        self.spinBox_3.setProperty("value", 20)
+        self.spinBox_3.setObjectName("spinBox_3")
+        self.spinBox_4 = QtWidgets.QSpinBox(SpiderSetting)
+        self.spinBox_4.setGeometry(QtCore.QRect(200, 300, 101, 27))
+        self.spinBox_4.setMaximum(999999999)
+        self.spinBox_4.setProperty("value", 200)
+        self.spinBox_4.setObjectName("spinBox_4")
+        self.spinBox_5 = QtWidgets.QSpinBox(SpiderSetting)
+        self.spinBox_5.setGeometry(QtCore.QRect(200, 360, 101, 27))
+        self.spinBox_5.setMaximum(100000)
+        self.spinBox_5.setProperty("value", 5)
+        self.spinBox_5.setObjectName("spinBox_5")
+        self.pushButton = QtWidgets.QPushButton(SpiderSetting)
+        self.pushButton.setGeometry(QtCore.QRect(60, 440, 99, 27))
+        self.pushButton.setObjectName("pushButton")
+        self.pushButton_2 = QtWidgets.QPushButton(SpiderSetting)
+        self.pushButton_2.setGeometry(QtCore.QRect(190, 440, 99, 27))
+        self.pushButton_2.setObjectName("pushButton_2")
+
+        self.retranslateUi(SpiderSetting)
+        self.pushButton.clicked.connect(SpiderSetting.slotConfirm)
+        self.pushButton_2.clicked.connect(SpiderSetting.slotReset)
+        QtCore.QMetaObject.connectSlotsByName(SpiderSetting)
+
+    def retranslateUi(self, SpiderSetting):
+        _translate = QtCore.QCoreApplication.translate
+        SpiderSetting.setWindowTitle(_translate("SpiderSetting", "爬虫设置"))
+        self.label.setText(_translate("SpiderSetting", "线程数目："))
+        self.label_2.setText(_translate("SpiderSetting", "爬行方向："))
+        self.label_3.setText(_translate("SpiderSetting", "爬行深度："))
+        self.label_4.setText(_translate("SpiderSetting", "爬行宽度："))
+        self.label_5.setText(_translate("SpiderSetting", "爬行数目："))
+        self.label_6.setText(_translate("SpiderSetting", "爬行时间(分)："))
+        self.comboBox.setItemText(0, _translate("SpiderSetting", "关注"))
+        self.comboBox.setItemText(1, _translate("SpiderSetting", "粉丝"))
+        self.comboBox.setItemText(2, _translate("SpiderSetting", "点赞"))
+        self.pushButton.setText(_translate("SpiderSetting", "确定"))
+        self.pushButton_2.setText(_translate("SpiderSetting", "重置"))
