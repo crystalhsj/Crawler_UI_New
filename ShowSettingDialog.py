@@ -18,6 +18,7 @@ class ShowSettingDialog(QtWidgets.QDialog, Ui_ShowSetting):
         self.checkBox_5.setChecked(self.data["gender"])
         self.checkBox_6.setChecked(self.data["fans"])
         self.checkBox_7.setChecked(self.data["follow"])
+        self.checkBox_8.setChecked(self.data["from_me"])
 
     def work(self):
         self.exec()
@@ -30,6 +31,7 @@ class ShowSettingDialog(QtWidgets.QDialog, Ui_ShowSetting):
         self.data["gender"] = self.checkBox_5.isChecked()
         self.data["fans"] = self.checkBox_6.isChecked()
         self.data["follow"]=self.checkBox_7.isChecked()
+        self.data["from_me"]=self.checkBox_8.isChecked()
         self.config.setConfig(self.data)
         self.close()
 
@@ -42,6 +44,7 @@ class ShowSettingDialog(QtWidgets.QDialog, Ui_ShowSetting):
         self.checkBox_5.setChecked(self.data["gender"])
         self.checkBox_6.setChecked(self.data["fans"])
         self.checkBox_7.setChecked(self.data["follow"])
+        self.checkBox_8.setChecked(self.data["from_me"])
 
 
 if __name__ == "__main__":
