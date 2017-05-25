@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>501</height>
+    <height>548</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,7 +17,7 @@
    <property name="geometry">
     <rect>
      <x>60</x>
-     <y>410</y>
+     <y>480</y>
      <width>99</width>
      <height>27</height>
     </rect>
@@ -30,7 +30,7 @@
    <property name="geometry">
     <rect>
      <x>230</x>
-     <y>410</y>
+     <y>480</y>
      <width>99</width>
      <height>27</height>
     </rect>
@@ -149,6 +149,22 @@
    </property>
    <property name="text">
     <string>关注</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBox_8">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>400</y>
+     <width>111</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>信息来源者</string>
    </property>
    <property name="checked">
     <bool>true</bool>

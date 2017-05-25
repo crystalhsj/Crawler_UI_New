@@ -81,6 +81,7 @@ class MyThread(threading.Thread):
                         info.append(user["gender"])
                         info.append(user["followers_count"])
                         info.append(user["follow_count"])
+                        info.append(item["from_me"])
                         lock.acquire()
                         try:
                             # wonder whether peoplenum is bigger than we need.
@@ -129,6 +130,7 @@ class MyThread(threading.Thread):
                                 content = requests.get(url, self.header).json()["cards"]
                                 time.sleep(self.interval)
                                 for j in content:
+                                    j["from_me"]=item
                                     if count < self.max_width:
                                         result.append(j)
                                         count = count + 1
@@ -162,6 +164,7 @@ class MyThread(threading.Thread):
                         info.append(user["gender"])
                         info.append(user["followers_count"])
                         info.append(user["follow_count"])
+                        info.append(item["from_me"])
                         lock.acquire()
                         try:
                             # wonder whether peoplenum is bigger than we need.
@@ -209,6 +212,7 @@ class MyThread(threading.Thread):
                                 content = requests.get(url, self.header).json()["cards"]
                                 time.sleep(self.interval)
                                 for j in content:
+                                    j["from_me"]=item
                                     if count < self.max_width:
                                         result.append(j)
                                         count = count + 1
@@ -354,6 +358,7 @@ class SpiderWb():
                                                  timeout=random.choice(range(100, 120)))
                     fans_json = fans_response.json()
                     for i in fans_json["cards"]:
+                        i["from_me"] = self.__start_user
                         if count < self.__spider_width:
                             fans_content.append(i)
                             count = count + 1
@@ -374,7 +379,7 @@ class SpiderWb():
             with open(self.__task_name + ".csv", 'a', errors='ignore', newline='') as f:
                 ff = csv.writer(f)
                 ff.writerow(
-                    ["id", "screen_name", "verified", "description", "gender", "followers_count", "follow_count"])
+                    ["id", "screen_name", "verified", "description", "gender", "followers_count", "follow_count","from_me"])
                 f.close()
 
             # mutiple thread
@@ -414,6 +419,7 @@ class SpiderWb():
                                                    timeout=random.choice(range(100, 120)))
                     follow_json = follow_response.json()
                     for i in follow_json["cards"]:
+                        i["from_me"] = self.__start_user
                         if count < self.__spider_width:
                             follow_content.append(i)
                             count = count + 1
@@ -434,7 +440,7 @@ class SpiderWb():
             with open(self.__task_name + ".csv", 'a', errors='ignore', newline='') as f:
                 ff = csv.writer(f)
                 ff.writerow(
-                    ["id", "screen_name", "verified", "description", "gender", "followers_count", "follow_count"])
+                    ["id", "screen_name", "verified", "description", "gender", "followers_count", "follow_count","from_me"])
                 f.close()
 
             # mutiple_thread

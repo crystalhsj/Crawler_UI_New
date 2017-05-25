@@ -11,12 +11,12 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_ShowSetting(object):
     def setupUi(self, ShowSetting):
         ShowSetting.setObjectName("ShowSetting")
-        ShowSetting.resize(400, 501)
+        ShowSetting.resize(400, 548)
         self.pushButton = QtWidgets.QPushButton(ShowSetting)
-        self.pushButton.setGeometry(QtCore.QRect(60, 410, 99, 27))
+        self.pushButton.setGeometry(QtCore.QRect(60, 480, 99, 27))
         self.pushButton.setObjectName("pushButton")
         self.pushButton_2 = QtWidgets.QPushButton(ShowSetting)
-        self.pushButton_2.setGeometry(QtCore.QRect(230, 410, 99, 27))
+        self.pushButton_2.setGeometry(QtCore.QRect(230, 480, 99, 27))
         self.pushButton_2.setObjectName("pushButton_2")
         self.checkBox = QtWidgets.QCheckBox(ShowSetting)
         self.checkBox.setGeometry(QtCore.QRect(90, 50, 97, 22))
@@ -47,6 +47,10 @@ class Ui_ShowSetting(object):
         self.checkBox_7.setGeometry(QtCore.QRect(90, 350, 97, 22))
         self.checkBox_7.setChecked(True)
         self.checkBox_7.setObjectName("checkBox_7")
+        self.checkBox_8 = QtWidgets.QCheckBox(ShowSetting)
+        self.checkBox_8.setGeometry(QtCore.QRect(90, 400, 111, 22))
+        self.checkBox_8.setChecked(True)
+        self.checkBox_8.setObjectName("checkBox_8")
 
         self.retranslateUi(ShowSetting)
         self.pushButton.clicked.connect(ShowSetting.slotConfirm)
@@ -65,4 +69,5 @@ class Ui_ShowSetting(object):
         self.checkBox_5.setText(_translate("ShowSetting", "性别"))
         self.checkBox_6.setText(_translate("ShowSetting", "粉丝"))
         self.checkBox_7.setText(_translate("ShowSetting", "关注"))
+        self.checkBox_8.setText(_translate("ShowSetting", "信息来源者"))
 

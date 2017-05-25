@@ -26,6 +26,7 @@ class Config:
                 newData["gender"]=True
                 newData["fans"]=True
                 newData["follow"]=True
+                newData["from_me"]=True
                 pickle.dump(newData, f)
         with open(self.fileName, 'rb') as f:
             self.data = pickle.load(f)

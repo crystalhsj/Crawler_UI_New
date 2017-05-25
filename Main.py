@@ -47,7 +47,7 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
         data=Config().getConfig()
         try:
             self.textEdit_2.clear()
-            list_show=[data["Id"],data["name"],data["verified"],data["description"],data["gender"],data["fans"],data["follow"]]
+            list_show=[data["Id"],data["name"],data["verified"],data["description"],data["gender"],data["fans"],data["follow"],data["from_me"]]
             with open(filename+".csv",'r')as r:
                 rr=csv.reader(r)
                 for i in rr:
