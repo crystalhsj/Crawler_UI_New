@@ -60,6 +60,7 @@ class MyThread(threading.Thread):
         result = self.start_list
         # loop[] :store ids of next depth.
         loop = []
+        dic={}
         if self.direction == "fans":
             # stop if fit one of these conditions.
             while result != None and self.depth <= self.max_depth and self.peoplenum <= self.max_people and self.__running.is_set():
@@ -332,7 +333,6 @@ class SpiderWb():
         self.pause=False
 
     def start(self):
-
         # direction : "fans"
         if self.__direction == "fans":
             fans_content = []
@@ -641,33 +641,3 @@ class Time_over(threading.Thread):
         self.show.pushButton_2.setEnabled(False)
         self.show.pushButton_3.setEnabled(False)
 
-"""
-class GetInfo():
-    def __init__(self, filename, choice=[0, 1, 2, 3, 4, 5, 6]):
-        self.__filename = str(filename)
-        self.__choice = choice
-
-    def getAll(self):
-        r = csv.reader(open(self.__filename, 'r'))
-        final = []
-        next(r)
-        for row in r:
-            res = []
-            for index, item in enumerate(row):
-                if index in self.__choice:
-                    res.append(item)
-            final.append(res)
-        print(final)
-
-
-if __name__ == "__main__":
-    proxy = {
-
-    }
-    sw = SpiderWb(start_user="5822209475", task_name="fans2", threads=10, direction="fans", spider_depth=1,
-                  spider_width=20, spider_people=50, spider_time=50, proxy=proxy)
-    #sw.start()
-    # sw.test()
-    #sw.time_over()
-    #GetInfo("fans.csv").getAll()
-"""
